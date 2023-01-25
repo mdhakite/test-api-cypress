@@ -1,0 +1,243 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-01-19T08:40:08.218Z",
+    "end": "2023-01-19T08:40:33.266Z",
+    "duration": 15765,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "27f1dca8-5aa4-44b6-b3af-1684e7faf3b0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\UserController\\UserRequests.cy.ts",
+      "file": "cypress\\e2e\\UserController\\UserRequests.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ab04486-08fb-41fd-ac43-64d5046e9b40",
+          "title": "User Controller Request Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Create contact us request",
+              "fullTitle": "User Controller Request Tests Test Create contact us request",
+              "timedOut": null,
+              "duration": 1461,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('contactUs\\\\form.json').then(payload => {\n    cy.request({\n        method: 'POST',\n        url: '/platformservice/v1/user/contact-us/request',\n        headers: {\n            'authorization': 'Bearer ' + token\n        },\n        body: payload\n    }).then(res => {\n        cy.log(JSON.stringify(res));\n        expect(res.status).to.eq(201);\n        expect(res.body.contactUs.firstName).to.eq(payload.contactUs.firstName);\n        expect(res.body.contactUs).has.property('email', payload.contactUs.email);\n        expect(res.body.contactUs).has.property('lastName', payload.contactUs.lastName);\n        expect(res.body.contactUs).has.property('contactNumber', payload.contactUs.contactNumber);\n        expect(res.body.contactUs).has.property('messageSubject', payload.contactUs.messageSubject);\n        expect(res.body.contactUs).has.property('howCanWeHelp', payload.contactUs.howCanWeHelp);\n        expect(res.body.contactUs).has.property('userType', payload.contactUs.userType);\n    });\n});",
+              "err": {},
+              "uuid": "b222ab29-1a23-4f33-b75f-62d6b8abfdb3",
+              "parentUUID": "7ab04486-08fb-41fd-ac43-64d5046e9b40",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b222ab29-1a23-4f33-b75f-62d6b8abfdb3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1461,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e5043dca-bb30-4636-8207-bbfb13169544",
+      "title": "",
+      "fullFile": "cypress\\e2e\\NgoRegistrationController\\NgoRequests.cy.ts",
+      "file": "cypress\\e2e\\NgoRegistrationController\\NgoRequests.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec804809-756d-43bb-bd07-11a897ae4f95",
+          "title": "Ngo Request Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Get ngo registration request by ngo name with basic information",
+              "fullTitle": "Ngo Request Tests Test Get ngo registration request by ngo name with basic information",
+              "timedOut": null,
+              "duration": 6385,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n    method: 'GET',\n    url: 'platformservice/v1/ngo/request/' + ngoName,\n    headers: {\n        'authorization': 'Bearer ' + token\n    }\n}).then(res => {\n    expect(res.status).to.eq(200);\n    cy.log(JSON.stringify(res));\n});",
+              "err": {},
+              "uuid": "1f0889b5-1b70-4f64-b00d-9a65d991ca00",
+              "parentUUID": "ec804809-756d-43bb-bd07-11a897ae4f95",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Get all ngo registration requests with basic information",
+              "fullTitle": "Ngo Request Tests Test Get all ngo registration requests with basic information",
+              "timedOut": null,
+              "duration": 3749,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n    method: 'GET',\n    url: 'platformservice/v1/ngo/requests?pageNumber=0&pageSize=100',\n    headers: {\n        'authorization': 'Bearer ' + token\n    }\n}).then(res => {\n    expect(res.status).to.eq(200);\n    cy.log(JSON.stringify(res));\n});",
+              "err": {},
+              "uuid": "8b5a0d44-bd31-4757-8ede-254dbc616c86",
+              "parentUUID": "ec804809-756d-43bb-bd07-11a897ae4f95",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Get pending ngo registration requests with basic information",
+              "fullTitle": "Ngo Request Tests Test Get pending ngo registration requests with basic information",
+              "timedOut": null,
+              "duration": 2631,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n    method: 'GET',\n    url: 'platformservice/v1/ngo/requests/pending?pageNumber=0&pageSize=100',\n    headers: {\n        'authorization': 'Bearer ' + token\n    }\n}).then(res => {\n    cy.log(JSON.stringify(res));\n    expect(res.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "5bb411a1-c79f-413b-808e-5eac999a67b5",
+              "parentUUID": "ec804809-756d-43bb-bd07-11a897ae4f95",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1f0889b5-1b70-4f64-b00d-9a65d991ca00",
+            "8b5a0d44-bd31-4757-8ede-254dbc616c86",
+            "5bb411a1-c79f-413b-808e-5eac999a67b5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12765,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "afa8ad1b-1584-46ef-ae86-20d4d76f4387",
+          "title": "Ngo Tests to Fail",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Get all ngo registration requests with basic information",
+              "fullTitle": "Ngo Tests to Fail Test Get all ngo registration requests with basic information",
+              "timedOut": null,
+              "duration": 1539,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n    method: 'POST',\n    url: 'https://dev-keycloak.ugdevops.com/auth/realms/UG/protocol/openid-connect/token',\n    form: true,\n    body: {\n        \"client_id\": \"UserService\",\n        \"client_secret\": \"4555bac1-bf77-498f-8973-ccc5d264846b\",\n        \"grant_type\": \"client_credentials\",\n        \"response_type\": 'code'\n    }\n}).then(res => {\n    const token = res.body.access_token;\n    return token;\n}).then(token => {\n    cy.request({\n        method: 'GET',\n        url: 'platformservice/v1/ngo/requests?pageNumber=0&pageSize=100',\n        headers: {\n            'authorization': 'Bearer ' + token\n        }\n    }).then(res => {\n        expect(res.status).to.eq(201);\n    });\n});",
+              "err": {
+                "message": "AssertionError: expected 200 to equal 201",
+                "estack": "AssertionError: expected 200 to equal 201\n    at Context.eval (webpack:///./cypress/e2e/NgoRegistrationController/NgoRequests.cy.ts:94:38)",
+                "diff": "- 200\n+ 201\n"
+              },
+              "uuid": "516c9d6a-42a8-48d4-a6b3-3f019937a5e0",
+              "parentUUID": "afa8ad1b-1584-46ef-ae86-20d4d76f4387",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "516c9d6a-42a8-48d4-a6b3-3f019937a5e0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1539,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "test-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "test-report",
+        "reportDir": "./reports",
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

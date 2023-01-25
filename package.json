@@ -1,0 +1,22 @@
+{
+  "name": "ug_api_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "merge": "mochawesome-merge ./reports/*.json > ./unified-report/unified-report.json",
+    "final_report": "marge ./unified-report/unified-report.json --reportDir ./ --inline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.3.0",
+    "minimist": "^1.2.7",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

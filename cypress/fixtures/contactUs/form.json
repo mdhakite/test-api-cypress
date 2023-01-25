@@ -1,0 +1,11 @@
+{
+    "contactUs": {
+      "contactNumber": "12345678",
+      "email": "VedaFoundation@gmail.com",
+      "firstName": "demo_Test",
+      "howCanWeHelp": "testing purpose-API Automation Testing",
+      "lastName": "test",
+      "messageSubject": "Other",
+      "userType": "Other"
+    }
+  }
