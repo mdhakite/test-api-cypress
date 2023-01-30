@@ -1,0 +1,99 @@
+{
+	"jobApplication": {
+		"address": {
+			"city": "Nagpur",
+			"country": "India",
+			"state": "Maharashtra"
+		},
+		"candidateInfo": {
+			"email": "testcandidate@email.com",
+			"name": "John Snow",
+			"phoneNumber": "8087258593"
+		},
+		"coverLetter": {
+			"document": true,
+			"documentText": "This is Cover Letter",
+			"documentUrl": {
+				"caption": "Cover letter",
+				"jobResourceType": "COVER_LETTER",
+				"stringUrl": "https://ug-platform-private-data-dev.s3.us-west-2.amazonaws.com/dev/f21b1150-ee4e-490e-a81d-8bb66a98a4c6-c15d445b-9c15-4ac1-a66b-98012b79e280/Document-resume/Resume.txt.txt"
+			}
+		},
+		"firstSpokenLanguage": {
+			"metaRefId": 39,
+			"selectedValue": "English"
+		},
+		"haveWorkedAtUG": true,
+		"howDidYouHearAboutJob": {
+			"metaRefId": 3,
+			"selectedValue": "Monster"
+		},
+		"jobCategory": "Marketing",
+		"jobId": ,
+		"jobType": "FULL_TIME",
+		"questions": [{
+				"question": "Why Are You Excited to Work At UniversalGiving&#174;?",
+				"answer": "It is good here"
+			},
+			{
+				"question": "Tell Us One Thing That You Think We Should Improve On The UniversalGiving.org Website.",
+				"answer": "Improve the unimproved"
+			}
+		],
+		"references": [{
+				"referenceInfo": {
+					"name": "David J",
+					"phoneNumber": "1234567890",
+					"email": "david@testemail.com"
+				},
+				"title": "Mr",
+				"relation": "Brother",
+				"lengthOfContact": "20"
+			},
+			{
+				"referenceInfo": {
+					"name": "Moana Z",
+					"phoneNumber": "9876543210",
+					"email": "moana@testemail.com"
+				},
+				"title": "Ms",
+				"relation": "Friend",
+				"lengthOfContact": "3"
+			},
+			{
+				"referenceInfo": {
+					"name": "Tyrion L",
+					"phoneNumber": "9890587321",
+					"email": "tyrion@testemail.com"
+				},
+				"title": "Dr",
+				"relation": "Friend",
+				"lengthOfContact": "4"
+			}
+		],
+		"resume": {
+			"document": true,
+			"documentText": "Resume",
+			"documentUrl": {
+				"caption": "Resume",
+				"jobResourceType": "RESUME",
+				"stringUrl": "https://ug-platform-private-data-dev.s3.us-west-2.amazonaws.com/dev/f21b1150-ee4e-490e-a81d-8bb66a98a4c6-12c77e6d-6cfa-4d8d-b610-c46daac245dc/Document-resume/John_Resume.txt",
+				"url": "https://ug-platform-private-data-dev.s3.us-west-2.amazonaws.com/dev/f21b1150-ee4e-490e-a81d-8bb66a98a4c6-12c77e6d-6cfa-4d8d-b610-c46daac245dc/Document-resume/John_Resume.txt"
+			},
+			"resumeFromUserProfile": false
+		},
+		"userId": "string",
+		"video": {
+			"jobResourceType": "COVER_LETTER"
+		},
+		"websiteURL": "www.testwebsite.com/gotusers",
+		"whatsAppNumber": "8087252512",
+		"workAuthorization": {
+			"selectedValue": "Green card",
+			"metaRefId": 2
+		},
+		"writingSamples": [{
+			"document": false
+		}]
+	}
+}

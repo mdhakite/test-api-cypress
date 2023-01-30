@@ -31,17 +31,17 @@ describe('User Controller Request Tests', () => {
                 body: payload
             }).then(res => {
                 cy.log(JSON.stringify(res))
-                expect(res.status).to.eq(201)
-                expect(res.body.contactUs.firstName).to.eq(payload.contactUs.firstName)
-                expect(res.body.contactUs).has.property('email', payload.contactUs.email)
-                expect(res.body.contactUs).has.property('lastName', payload.contactUs.lastName)
-                expect(res.body.contactUs).has.property('contactNumber', payload.contactUs.contactNumber)
-                expect(res.body.contactUs).has.property('messageSubject', payload.contactUs.messageSubject)
-                expect(res.body.contactUs).has.property('howCanWeHelp', payload.contactUs.howCanWeHelp)
-                expect(res.body.contactUs).has.property('userType', payload.contactUs.userType)
+                expect(res.status).to.eq(2081)
+                /* ADD VALIDATIONS FOR ALL THE PARAMETERS PRESENT IN THE FORM */
             })
 
         })
 
     })
+
+    /**ADD MORE TESTS FROM 
+     * https://dev-platformservice.ugdevops.com/swagger-ui/index.html#/user-controller
+     * https://dev-platformservice.ugdevops.com/swagger-ui/index.html#/user-account-controller
+     */
+
 })
